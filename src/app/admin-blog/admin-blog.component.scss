@@ -1,0 +1,53 @@
+.inputField{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.inputTitle, .inputText, .inputAuthor{
+    margin-top: 5px;
+    border-radius: 5px;
+    text-indent: 15px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.inputTitle:hover, .inputText:hover, .inputAuthor:hover{
+    border: 1px solid lightblue;
+    box-shadow: 0 0 5px lightblue;
+}
+
+.inputError{
+    margin-top: 5px;
+    border-radius: 5px;
+    text-indent: 15px;
+    outline: none;
+    border: 1px solid brown;
+}
+
+/*start style table*/
+table th, table td {
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    font-size: 15px;
+}
+
+tr {
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.btn:hover{
+    background-color: lightgray;
+}
+
+/*end style table*/
+

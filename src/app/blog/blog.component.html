@@ -1,0 +1,23 @@
+<div class="container mt-3 mb-3">
+    <div class="row">
+        <ng-container *ngIf="userBlog.length > 0">
+            <div class="col-4 mt-3" *ngFor="let blog of userBlog">
+                <div class="w-100">
+                    <img [src]="blog?.imagePath" class="card-img-top" alt="...">
+                    <p class="text-primary mt-2">{{blog?.author}}</p>
+                    <h4>{{blog?.title}}</h4>
+                    <p>{{blog?.text}}</p>
+                  </div>
+            </div>
+        </ng-container>
+    <ng-container *ngIf="userBlog.length === 0">
+        <div class="card text-center">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <h1 class="text-center">Blogs not added yet</h1>
+            </div>
+            <div class="card-footer text-muted"></div>
+          </div>
+    </ng-container>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <button type="button" class="btn btn-dark mt-4 text-start w-100">Blogs</button>
+        </div>
+        <div class="col-10 mt-2">
+            <div class="inputField">
+                <input type="text" name="inputTitle" [class]="inputTitle" [(ngModel)]="title"
+                    [placeholder]="placeholderAddTitle" autocomplete="off">
+                <textarea name="inputText" id="inputText" cols="30" rows="5" [class]="inputText" [(ngModel)]="text"
+                    [placeholder]="placeholderAddText"></textarea>
+                <input type="text" name="inputAuthor" [class]="inputAuthor" [(ngModel)]="author"
+                    [placeholder]="placeholderAddAuthor" autocomplete="off">
+            </div>
+            <button *ngIf="!editStatus" type="button" class="btn btn-dark mt-2 text-start" (click)="addBlog()">
+                Add</button>
+            <button *ngIf="editStatus" type="button" class="btn btn-ligth mt-2 text-start" (click)="saveBlog()">Save
+                edit</button>
+            <div>
+                <table>
+                    <thead class="line">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Text</th>
+                            <th>Author</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let blog of adminBlog; index as i" class="line">
+                            <th>{{blog.id}}</th>
+                            <td>{{blog.title}}</td>
+                            <td>{{blog.text}}</td>
+                            <td>{{blog.author}}</td>
+                            <td><button class="btn btn-dark" (click)="editBlog(blog)">Edit</button></td>
+                            <td><button class="btn btn-dark" (click)="deleteBlog(blog)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
