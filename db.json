@@ -1,7 +1,11 @@
 {
   "blogs": [
     {
-      
+      "title": "asad",
+      "text": "asd",
+      "author": "asdas",
+      "imagePath": "https://asset.kompas.com/crops/7msXzpGEtgtdootwj4Q2cbkx3T8=/0x0:1920x1280/750x500/data/photo/2022/03/28/6241538e6229a.jpg",
+      "id": 1
     }
   ]
 }
